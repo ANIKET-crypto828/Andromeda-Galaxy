@@ -1,8 +1,6 @@
 services:
-  - type: web
+  - type: static
     name: galaxy-generator
-    env: node
-    plan: free
+    rootDir: 16-galaxy
     buildCommand: npm install && npm run build
-    startCommand: npm run dev
-    staticPublishPath: dist
+    publishPath: dist
