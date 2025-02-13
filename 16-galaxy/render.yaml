@@ -1,6 +1,7 @@
 services:
-  - type: static
+  - type: cron
+    runtime: node
+    schedule: daily
     name: galaxy-generator
     rootDir: 16-galaxy
     buildCommand: npm install && npm run build
-    publishPath: dist
