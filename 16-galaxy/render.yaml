@@ -1,7 +1,7 @@
+# filepath: /g:/Galaxy/16-galaxy/render.yaml
 services:
-  - type: cron
-    runtime: node
-    schedule: daily
+  - type: static
     name: galaxy-generator
-    rootDir: 16-galaxy
-    buildCommand: npm install && npm run build
+    rootDir: .
+    buildCommand: npm install && npx vite build
+    publishPath: dist
